@@ -33,6 +33,7 @@ RES_URL = 'http://127.0.0.1:5000/static/'
 MODULES_ON = {
     'botmanage',
     'dice',
+    'fake_message',
     'groupmaster',
     'hoshino_training',
     # 'hourcall',
