@@ -33,16 +33,20 @@ RES_URL = 'http://127.0.0.1:5000/static/'
 MODULES_ON = {
     'botmanage',
     'dice',
-    'fake_message',
-    'groupmaster',
-    'hoshino_training',
+    'eqa',  #问答：https://github.com/pcrbot/erinilis-modules/tree/master/eqa
+    'fake_message',  #生成假消息，https://github.com/pcrbot/fake_message
+    'groupmaster',  #我自己改过一点
+    'guesscard',  #猜立绘，https://github.com/zangxx66/HoshinoBot-xcwRecord/tree/master/guesscard
+    'hoshino_training',  #强化基础功能：https://github.com/zyujs/hoshino_training
     # 'hourcall',
     # 'kancolle',
     # 'mikan',
     'pcrclanbattle',
+    'picfinder_take',  #搜图：https://github.com/pcrbot/picfinder_take
     'priconne',
+    'repetition',
     # 'setu',
-    'setu_renew',
+    'setu_renew',  #https://github.com/pcrbot/setu_renew
     # 'translate',
     # 'twitter',            # 轮询版转推（old）
     # 'twitter_stream',     # 推流版转推（beta）
