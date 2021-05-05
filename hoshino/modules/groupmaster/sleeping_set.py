@@ -27,10 +27,10 @@ async def sleep(bot, ev: CQEvent):
 
 @sv.on_rex(r'(.*)(狗|苟|早泄)(群|裙)主(.*)')
 async def sleep(bot, ev: CQEvent):
-    sleep_time = random.randint(30,60)
+    sleep_time = random.randint(30,60)*60
     await util.silence(ev, sleep_time, skip_su=True)
 
 @sv.on_rex(r'(.*)(狗|苟|臭)(布丁|机器人)(.*)')
 async def sleep(bot, ev: CQEvent):
-    sleep_time = random.randint(10,30)
+    sleep_time = random.randint(10,30)*60
     await util.silence(ev, sleep_time, skip_su=True)
