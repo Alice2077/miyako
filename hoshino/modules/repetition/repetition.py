@@ -28,7 +28,7 @@ async def repeat(bot, ev: CQEvent):
                 msg = msg.replace("我",list(hoshino.config.NICKNAME)[0])
             else:
                 msg = msg.replace("我","你")
-            msg = yinglish.chs2yin(msg)
+            msg = yinglish.chs2yin(msg, random.random())
             await bot.send(ev, msg, at_sender=False)
             # is_repeated = True
             # await asyncio.sleep(random.randint(1,60))
