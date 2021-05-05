@@ -17,3 +17,4 @@ peony-twitter[all]~=1.1.7
 GitPython>=3.1.14
 pyyaml
 sqlitedict
+jieba

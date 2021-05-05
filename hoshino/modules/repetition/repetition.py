@@ -6,6 +6,7 @@ import asyncio
 
 from hoshino import Service, priv, util
 from hoshino.typing import CQEvent
+from hoshino.modules.yinglish import yinglish
 import hoshino
 
 sv = Service('repeater', help_='''
@@ -25,14 +26,13 @@ async def repeat(bot, ev: CQEvent):
             uid = ev['user_id']
             if uid in hoshino.config.SUPERUSERS:
                 msg = msg.replace("我",list(hoshino.config.NICKNAME)[0])
-                await bot.send(ev, msg, at_sender=False)
-                is_repeated = True
             else:
                 msg = msg.replace("我","你")
-                await bot.send(ev, msg, at_sender=False)
-                is_repeated = True
+            msg = yinglish.chs2yin(msg)
+            await bot.send(ev, msg, at_sender=False)
+            # is_repeated = True
             # await asyncio.sleep(random.randint(1,60))
-            is_repeated = False
+            # is_repeated = False
             p=0.3
         else:
             p = 1 - (1 - p) / 1.5
