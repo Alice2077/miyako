@@ -182,8 +182,13 @@ async def on_input_chara_name(bot, ev: CQEvent):
             score_counter = ScoreCounter2() 
             daily_desc_limiter.increase(guid)
             dailynum = daily_desc_limiter.get_num(guid)
-            score_counter._add_score(gid,uid,200)            
-            msg += f'\n{user_card}获得了200金币哦。(今天第{dailynum}/{MAX_GUESS_NUM}次)'
+            score = random.randint(10, 100)
+            score_counter._add_score(gid,uid,score)          
+            msg += f'\n{user_card}获得了{score}金币哦。(今天第{dailynum}/{MAX_GUESS_NUM}次)'
+            if score<20:
+                msg+="\n非酋就是你本人了~"
+            if score>90:
+                msg+="\n欧皇出现了！"
 
         await bot.send(ev, msg)
         
